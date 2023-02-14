@@ -1,0 +1,14 @@
+-- `varchar` requires an argument that specifies the max length,
+-- while `text` allows a string of any length.
+-- ***
+-- `integer`: signed 4-byte integer
+-- `decimal`: arbitrary exact precision number, e.g., decimal(10, 4);
+--            the first number is precision (total numbers) and the
+--            second number is scale (decimal places).
+-- `real`: floating-point number (variable precision, inexact)
+-- ***
+-- Max `integer` value: 2,147,483,647 (4 bytes = 32 bits)
+-- ***
+-- `date` has date only, while `timestamp` has date and time.
+-- ***
+-- `timestamp with time zone` holds date and time with timezone data.
