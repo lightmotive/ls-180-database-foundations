@@ -30,3 +30,5 @@ LIMIT
   1
 OFFSET
   1;
+
+-- Continue with exercise 4...
