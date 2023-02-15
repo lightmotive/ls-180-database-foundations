@@ -100,10 +100,10 @@ SELECT
 FROM
   (
     SELECT
-      item,
+      *,
       round((13.0 / 60.0) * prep_time, 2) AS labor_cost
     FROM
       menu_items
-  )
+  ) AS menu_items_with_calculations
 ORDER BY
   profit DESC;
