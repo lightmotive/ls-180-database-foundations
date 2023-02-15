@@ -55,3 +55,37 @@ SET
   duration = 113
 WHERE
   title = 'The Conversation';
+
+INSERT INTO
+  films (title, "year", genre, director, duration)
+VALUES
+  ('1984', 1956, 'scifi', 'Michael Anderson', 90),
+  ('Tinker Tailor Soldier Spy', 2011, 'espionage', 'Tomas Alfredson', 127),
+  ('The Birdcage', 1996, 'comedy', 'Mike Nichols', 118);
+
+SELECT
+  title,
+  date_part('year', CURRENT_DATE) - "year" AS age
+FROM
+  films
+ORDER BY
+  age;
+
+SELECT
+  title,
+  duration
+FROM
+  films
+WHERE
+  duration > 120
+ORDER BY
+  duration DESC;
+
+SELECT
+  title AS longest_film
+FROM
+  films
+ORDER BY
+  duration DESC
+LIMIT
+  1;
