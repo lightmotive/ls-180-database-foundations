@@ -49,3 +49,20 @@ VALUES
   ('Greater Koa Finch', 19.0, 24.0, 'Fringillidae', TRUE),
   ('Carolina Parakeet', 33.0, 55.8, 'Psittacidae', TRUE),
   ('Common Kestrel', 35.5, 73.5, 'Falconidae', FALSE);
+
+SELECT
+  name,
+  family
+FROM
+  birds
+WHERE
+  extinct = FALSE
+ORDER BY
+  length DESC;
+
+SELECT
+  round(avg(wingspan), 1),
+  min(wingspan),
+  max(wingspan)
+FROM
+  birds;
