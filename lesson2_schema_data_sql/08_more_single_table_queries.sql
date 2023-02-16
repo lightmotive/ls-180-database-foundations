@@ -21,3 +21,21 @@ GROUP BY
   email_domain
 ORDER BY
   count DESC;
+
+DELETE FROM people
+WHERE
+  id = 3399;
+
+DELETE FROM people
+WHERE
+  state = 'CA';
+
+-- Write a SQL statement that will update the given_name values to be all
+-- uppercase for all users with an email address that contains teleworm.us.
+UPDATE people
+SET
+  given_name = upper(given_name)
+WHERE
+  email LIKE '%teleworm.us';
+
+DELETE FROM people;
