@@ -11,3 +11,13 @@ ORDER BY
   population DESC
 LIMIT
   10;
+
+SELECT
+  split_part(email, '@', 2) as email_domain,
+  count(id)
+FROM
+  people
+GROUP BY
+  email_domain
+ORDER BY
+  count DESC;
